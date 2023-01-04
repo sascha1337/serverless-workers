@@ -81,13 +81,13 @@ def run(job):
     img_paths = MODEL.predict(
         prompt=job_input["prompt"],
         negative_prompt=job_input.get("negative_prompt", None),
-        width=job_input.get('width', 512),
-        height=job_input.get('height', 512),
+        width=job_input.get('width', 768),
+        height=job_input.get('height', 768),
         init_image=job_input.get('init_image', None),
         mask=job_input.get('mask', None),
         prompt_strength=job_input.get('prompt_strength', 0.8),
         num_outputs=job_input.get('num_outputs', 1),
-        num_inference_steps=job_input.get('num_inference_steps', 50),
+        num_inference_steps=job_input.get('num_inference_steps', 30),
         guidance_scale=job_input.get('guidance_scale', 7.5),
         scheduler=job_input.get('scheduler', "K-LMS"),
         seed=job_input.get('seed', None)
